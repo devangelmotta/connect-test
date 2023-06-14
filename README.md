@@ -3,41 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Documentación del Proyecto NestJS</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.5;
-    }
-
-    h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    code {
-      font-family: Consolas, monospace;
-      background-color: #f4f4f4;
-      padding: 2px 4px;
-    }
-
-    pre {
-      background-color: #f4f4f4;
-      padding: 10px;
-    }
-
-    .indent-1 {
-      margin-left: 20px;
-    }
-
-    .indent-2 {
-      margin-left: 40px;
-    }
-  </style>
 </head>
 <body>
   <h1>Documentación del Proyecto NestJS</h1>
