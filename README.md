@@ -4,19 +4,7 @@
 
 El proyecto sigue la siguiente estructura:
 
-src/
-├── cars/
-│ ├── cars.controller.ts
-│ ├── cars.module.ts
-│ └── cars.service.ts
-├── dto/
-│ ├── create-cars.dto.ts
-│ └── get-cars.dto.ts
-├── models/
-│ └── car.model.ts
-└── validators/
-└── car-validator.ts
-
+    `src/   ├── cars/   │   ├── cars.controller.ts   │   ├── cars.module.ts   │   └── cars.service.ts   ├── dto/   │   ├── create-cars.dto.ts   │   └── get-cars.dto.ts   └── models/       └── car.model.ts   └── validators/       └── car-validator.ts`
 
 ## `cars.controller.ts`
 
