@@ -9,7 +9,7 @@ export class CarsController {
   constructor(private readonly carService: CarsService) {}
 
   @Post()
-  async createUser(@Body() createCarDto: CreateCarDto): Promise<Car> {
+  async createCar(@Body() createCarDto: CreateCarDto): Promise<Car> {
     // Verificar la validación personalizada del campo "make"
     const isValidMake = new IsValidMakeConstraint().validate(createCarDto.make);
     if (!isValidMake)

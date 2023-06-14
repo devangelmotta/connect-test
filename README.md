@@ -1,73 +1,134 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Documentación del Proyecto NestJS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
 
-## Description
+    code {
+      font-family: Consolas, monospace;
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+    }
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+    }
 
-## Installation
+    .indent-1 {
+      margin-left: 20px;
+    }
 
-```bash
-$ yarn install
-```
+    .indent-2 {
+      margin-left: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Documentación del Proyecto NestJS</h1>
+  
+  <h2>Proyecto</h2>
+  <p>El proyecto sigue la siguiente estructura:</p>
+  <pre>
+    <code>src/
+  ├── cars/
+  │   ├── cars.controller.ts
+  │   ├── cars.module.ts
+  │   └── cars.service.ts
+  ├── dto/
+  │   ├── create-cars.dto.ts
+  │   └── get-cars.dto.ts
+  └── models/
+      └── car.model.ts
+  └── validators/
+      └── car-validator.ts
+    </code>
+  </pre>
 
-## Running the app
+  <h2>cars.controller.ts</h2>
+  <p>
+    El archivo <code>cars.controller.ts</code> contiene el controlador para el recurso "cars".
+    Este controlador tiene dos métodos:
+  </p>
+  <ul>
+    <li><code>createCar</code>: Este método se encarga de crear un nuevo "car" después de validar la solicitud y llama al servicio <code>createCar</code>.</li>
+    <li><code>getAllCars</code>: Este método llama al servicio <code>getAllCars</code> para devolver todos los "cars" en la base de datos.</li>
+  </ul>
+  <pre><code class="indent-1">Archivo: cars/cars.controller.ts</code></pre>
 
-```bash
-# development
-$ yarn run start
+  <h2>cars.module.ts</h2>
+  <p>
+    El archivo <code>cars.module.ts</code> define el módulo <code>CarsModule</code> que contiene la configuración del módulo.
+    Este módulo importa el controlador <code>CarsController</code>, el servicio <code>CarsService</code> y el modelo <code>Car</code>.
+  </p>
+  <pre><code class="indent-1">Archivo: cars/cars.module.ts</code></pre>
 
-# watch mode
-$ yarn run start:dev
+  <h2>cars.service.ts</h2>
+  <p>
+    El archivo <code>cars.service.ts</code> contiene los servicios utilizados por el controlador.
+    Estos servicios se encargan de realizar consultas a la base de datos para insertar o obtener información sobre los "cars".
+  </p>
+  <pre><code class="indent-1">Archivo: cars/cars.service.ts</code></pre>
 
-# production mode
-$ yarn run start:prod
-```
+  <h2>dto</h2>
+  <p>
+    El directorio <code>dto</code> contiene los objetos de transferencia de datos (DTO) utilizados en el proyecto.
+  </p>
+  <ul>
+    <li><code>create-cars.dto.ts</code>: Contiene la clase <code>CreateCarDto</code> utilizada para crear nuevos "cars".</li>
+    <li><code>get-cars.dto.ts</code>: Contiene la clase <code>GetAllCarsDto</code> utilizada para obtener "cars".</li>
+  </ul>
+  <pre><code class="indent-1">Directorio: dto/</code></pre>
 
-## Test
+  <h2>models</h2>
+  <p>
+    El directorio <code>models</code> contiene los modelos de bases de datos en MongoDB.
+  </p>
+  <ul>
+    <li><code>car.model.ts</code>: Contiene el modelo <code>Car</code> definido utilizando Mongoose y el esquema correspondiente.</li>
+  </ul>
+  <pre><code class="indent-1">Directorio: models/</code></pre>
 
-```bash
-# unit tests
-$ yarn run test
+  <h2>validator</h2>
+  <p>
+    El directorio <code>validator</code> contiene los scripts de validación utilizados en el proyecto.
+  </p>
+  <ul>
+    <li><code>car-validator.ts</code>: Verifica que la propiedad <code>make</code> se encuentre dentro de los valores permitidos.</li>
+  </ul>
+  <pre><code class="indent-1">Directorio: validator/</code></pre>
 
-# e2e tests
-$ yarn run test:e2e
+  <h2>Iniciar el Proyecto</h2>
+  <p>Sigue los siguientes pasos para iniciar el proyecto:</p>
 
-# test coverage
-$ yarn run test:cov
-```
+  <pre><code class="indent-1">1. Descargar el repositorio:</code></pre>
+  <pre><code class="indent-2">git clone https://github.com/devangelmotta/connect-test.git</code></pre>
 
-## Support
+  <pre><code class="indent-1">2. Ingresar a la carpeta del repositorio:</code></pre>
+  <pre><code class="indent-2">cd connect-test</code></pre>
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+  <pre><code class="indent-1">3. Instalar dependencias:</code></pre>
+  <pre><code class="indent-2">yarn</code> <span style="color: gray;">(o)</span> <code class="indent-2">npm install</code></pre>
 
-## Stay in touch
+  <pre><code class="indent-1">4. Iniciar el proyecto:</code></pre>
+  <pre><code class="indent-2">yarn start:dev</code> <span style="color: gray;">(o)</span> <code class="indent-2">npm run start:dev</code></pre>
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+  <p>Cuando el proyecto se inicie automáticamente, se realizará una conexión a un Cluster de Atlas para conectarse a la base de datos.</p>
 
-## License
-
-Nest is [MIT licensed](LICENSE).
+</body>
+</html>
